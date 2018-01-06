@@ -2,7 +2,7 @@
 
 ### Notes:
 
-** 2.2 Dimensionality and structured models
+**2.2 Dimensionality and structured models
 
 	+ In the curse of dimensionality, it's hard to find near neighborhoods in high dimensions and stay local.
 	+ A linear model f(x) = b0 + b1.x gives a reasonable fit, and a quadratic model fq(x) = b0 + b1.x + b2.x^2 fits slightly better (polynomial).
@@ -24,7 +24,7 @@
 
 			+ The volume of the interior boundary of the hypercube is 0.9^50 = 0.005, so the volume of the boundary is 1-0.005 = 0.995
 
-** 2.3 Model Selection and Bias-Variance Tradeoff
+**2.3 Model Selection and Bias-Variance Tradeoff
 
 	+ Assessing model accuracy.
 		
@@ -47,12 +47,12 @@
 
 		* While doing a homework assignment, you fit a Linear Model to your data set. You are thinking about changing the Linear Model to a Quadratic one. Which of the following is most likely true: [Using the Quadratic Model will decrease the Bias of your model.]
 
-** 2.4 Classification problems:
+**2.4 Classification problems:
 
 	+ The response variable Y is "qualitative" - e.g. email is one C = {spam, ham} where ham is a good email. Digit C is from {1-9}. The goal is to build a classifier C(x) that assigns a class label from C to a future unlabeled observation x. Assess the uncertainty in each classification. Understand the roles of the different predictors among x={x1, x2, .., xp}
 
 
-** Quizzes:
+**Quizzes:
 	
 	+ 2.Q.1: For each of the following parts, indicate whether we would generally expect the performance of a flexible statistical learning method to be better or worse than an inflexible model.
 
