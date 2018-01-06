@@ -1,1 +1,3 @@
-# Statistical-Learning
+# Statistical Learning
+#### Stanford University
+
