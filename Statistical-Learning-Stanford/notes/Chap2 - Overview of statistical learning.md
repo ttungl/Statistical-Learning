@@ -2,7 +2,7 @@
 
 ### Notes:
 
-**2.2 Dimensionality and structured models
+**2.2 Dimensionality and structured models**
 
 	+ In the curse of dimensionality, it's hard to find near neighborhoods in high dimensions and stay local.
 	+ A linear model f(x) = b0 + b1.x gives a reasonable fit, and a quadratic model fq(x) = b0 + b1.x + b2.x^2 fits slightly better (polynomial).
