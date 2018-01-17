@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Principal Components
 ====================
 We will use the `USArrests` data (which is in R)
@@ -13,7 +18,7 @@ We see that `Assault` has a much larger variance than the other variables. It wo
 pca.out=prcomp(USArrests, scale=TRUE)
 pca.out
 names(pca.out)
-biplot(pca.out, scale=0)
+biplot(pca.out, scale=0, cex=.6)
 ```
 
 K-Means Clustering
@@ -22,10 +27,10 @@ K-means works in any dimension, but is most fun to demonstrate in two, because w
 Lets make some data with clusters. We do this by shifting the means of the points around.
 ```{r}
 set.seed(101)
-x=matrix(rnorm(100*2),100,2)
-xmean=matrix(rnorm(8,sd=4),4,2)
-which=sample(1:4,100,replace=TRUE)
-x=x+xmean[which,]
+x=matrix(rnorm(100*2),100,2) # r:100; c:2
+xmean=matrix(rnorm(8,sd=4),4,2) # r:4; c:2
+which=sample(1:4,100,replace=TRUE) # sample 1->4
+x=x+xmean[which,] # pick hundred rows matrix with 2 cols from x.
 plot(x,col=which,pch=19)
 ```
 We know the "true" cluster IDs, but we wont tell that to the `kmeans` algorithm.
@@ -34,8 +39,8 @@ We know the "true" cluster IDs, but we wont tell that to the `kmeans` algorithm.
 km.out=kmeans(x,4,nstart=15)
 km.out
 plot(x,col=km.out$cluster,cex=2,pch=1,lwd=2)
-points(x,col=which,pch=19)
-points(x,col=c(4,3,2,1)[which],pch=19)
+points(x,col=which,pch=19) 
+points(x,col=c(4,3,2,1)[which],pch=19) # order
 ```
 
 Hierarchical Clustering
@@ -45,7 +50,7 @@ We will use these same data and use hierarchical clustering
 ```{r}
 hc.complete=hclust(dist(x),method="complete")
 plot(hc.complete)
-hc.single=hclust(dist(x),method="single")
+hc.single=hclust(dist(x),method="single") 
 plot(hc.single)
 hc.average=hclust(dist(x),method="average")
 plot(hc.average)
@@ -56,7 +61,7 @@ This will produce a vector of numbers from 1 to 4, saying which branch each obse
 
 We can use `table` to see how well they match:
 ```{r}
-hc.cut=cutree(hc.complete,4)
+hc.cut=cutree(hc.complete,4) # cut level 4
 table(hc.cut,which)
 table(hc.cut,km.out$cluster)
 ```
