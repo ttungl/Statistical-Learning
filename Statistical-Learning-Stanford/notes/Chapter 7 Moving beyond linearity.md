@@ -18,9 +18,13 @@
 	+ Which of the following can we add to linear models to capture nonlinear effects?
 
 	[x] Spline terms
+
 	[x] Polynomial terms
+
 	[x] Interactions
+
 	[] Arbitrary linear combinations of the variables
+	
 	[x] Step functions
 
 	+ Explanation
@@ -45,7 +49,9 @@
 	+ 1/ Why are natural cubic splines typically preferred over global polynomials of degree d?
 
 		[] Polynomials have too many degrees of freedom
+
 		[x] Polynomials tend to extrapolate very badly
+		
 		[] Polynomials are not as continuous as splines
 		
 		+ Explanation
@@ -57,8 +63,11 @@
 		Which of the following is a basis for linear splines with a knot at t? Select all that apply:
 
 		[v] 1,x,(x−t)1{x>t}
+
 		[v] 1,x,(x−t)1{x≤t}
+		
 		[] 1{x>t},1{x≤t},(x−t)1{x>t}
+		
 		[v] 1,(x−t)1{x≤t},(x−t)1{x>t}
 		
 		+ Explanation
@@ -77,6 +86,7 @@
 	+ In terms of model complexity, which is more similar to a smoothing spline with 100 knots and 5 effective degrees of freedom?
 
 		[x] A natural cubic spline with 5 knots correct
+
 		[] A natural cubic spline with 100 knots
 
 ## Generalized Additive models and local regression
@@ -110,6 +120,7 @@
 	True or False: In the GAM y∼f1(X1)+f2(X2)+e, as we make f1 and f2 more and more complex we can approximate any regression function to arbitrary precision.
 
 		[] True
+
 		[x] False correct
 		 
 ## R nonlinear functions in R
@@ -121,13 +132,17 @@
 	Suppose that we fit our model by the following three steps:
 
 	1) First fit our cubic spline model for y against X1, obtaining the fit f^1(x) and residuals ri=yi−f^1(Xi,1).
+
 	2) Then, fit a cubic spline model for r against X2 to obtain f^2(x).
+
 	3) Finally construct fitted values y^i=f^1(Xi,1)+f^2(Xi,2).
 
 	Will we get the same fitted values as we would if we fit the additive model for y against X1 and X2 jointly?
 
 	[] yes, no matter what
+
 	[] only if X1 and X2 are uncorrelated
+
 	[x] not necessarily, even if X1 and X2 are uncorrelated. correct
 	 
 
