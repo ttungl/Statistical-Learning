@@ -3,7 +3,7 @@ Nonlinear Models
 Here we explore the use of nonlinear models using some tools in R
 
 ```{r}
-require(ISLR)
+require('ISLR') # 
 attach(Wage)
 ```
 
@@ -13,7 +13,7 @@ Polynomials
 First we will use polynomials, and focus on a single predictor age:
 
 ```{r}
-fit=lm(wage~poly(age,4),data=Wage)
+fit=lm(wage~poly(age,4),data=Wage) # 4-degree poly.
 summary(fit)
 ```
 
@@ -21,19 +21,19 @@ The `poly()` function generates a basis of *orthogonal polynomials*.
 Lets make a plot of the fitted function, along with the standard errors of the fit.
 
 ```{r fig.width=7, fig.height=6}
-agelims=range(age)
+agelims=range(age) # get range of age
 age.grid=seq(from=agelims[1],to=agelims[2])
 preds=predict(fit,newdata=list(age=age.grid),se=TRUE)
-se.bands=cbind(preds$fit+2*preds$se,preds$fit-2*preds$se)
+se.bands=cbind(preds$fit+2*preds$se,preds$fit-2*preds$se) # cbind(): bind columns
 plot(age,wage,col="darkgrey")
 lines(age.grid,preds$fit,lwd=2,col="blue")
-matlines(age.grid,se.bands,col="blue",lty=2)
+matlines(age.grid,se.bands,col="blue",lty=2) # line type = 2 ~ dashed line.
 ```
 
 There are other more direct ways of doing this in R. For example
 
 ```{r}
-fita=lm(wage~age+I(age^2)+I(age^3)+I(age^4),data=Wage)
+fita=lm(wage~age+I(age^2)+I(age^3)+I(age^4),data=Wage) # fit all together
 summary(fita)
 ```
 
@@ -42,7 +42,7 @@ while `I(age^2)` is protected.
 The coefficients are different to those we got before! However, the fits are the same:
 
 ```{r}
-plot(fitted(fit),fitted(fita))
+plot(fitted(fit),fitted(fita)) # fits are the same, but representations are different.
 ```
 
 By using orthogonal polynomials in this simple way, it turns out that we can separately test
@@ -61,8 +61,9 @@ fita=lm(wage~education,data=Wage)
 fitb=lm(wage~education+age,data=Wage)
 fitc=lm(wage~education+poly(age,2),data=Wage)
 fitd=lm(wage~education+poly(age,3),data=Wage)
-anova(fita,fitb,fitc,fitd)
-
+anova(fita,fitb,fitc,fitd) # anova to sort which one is needed.
+# plot
+plot(age, wage, col="darkgrey")
 ```
 
 ### Polynomial logistic regression
@@ -73,8 +74,8 @@ constructed from `wage`. We code the big earners (`>250K`) as 1, else 0.
 ```{r}
 fit=glm(I(wage>250) ~ poly(age,3), data=Wage, family=binomial)
 summary(fit)
-preds=predict(fit,list(age=age.grid),se=T)
-se.bands=preds$fit + cbind(fit=0,lower=-2*preds$se,upper=2*preds$se)
+preds=predict(fit,list(age=age.grid),se=T) # prediction
+se.bands=preds$fit + cbind(fit=0,lower=-2*preds$se,upper=2*preds$se) # fit=0 to replicate n times.
 se.bands[1:5,]
 ```
 
@@ -85,9 +86,9 @@ $$p=\frac{e^\eta}{1+e^\eta}.$$
 We can do this simultaneously for all three columns of `se.bands`:
 
 ```{r}
-prob.bands=exp(se.bands)/(1+exp(se.bands))
+prob.bands=exp(se.bands)/(1+exp(se.bands)) # 
 matplot(age.grid,prob.bands,col="blue",lwd=c(2,1,1),lty=c(1,2,2),type="l",ylim=c(0,.1))
-points(jitter(age),I(wage>250)/10,pch="|",cex=.5)
+points(jitter(age),I(wage>250)/10,pch="|",cex=.5) # show density/population.
 ```
 
 Splines
@@ -96,11 +97,11 @@ Splines are more flexible than polynomials, but the idea is rather similar.
 Here we will explore cubic splines.
 
  ```{r}
-require(splines)
+require('splines')
 fit=lm(wage~bs(age,knots=c(25,40,60)),data=Wage)
 plot(age,wage,col="darkgrey")
 lines(age.grid,predict(fit,list(age=age.grid)),col="darkgreen",lwd=2)
-abline(v=c(25,40,60),lty=2,col="darkgreen")
+abline(v=c(25,40,60),lty=2,col="darkgreen") # abline ~ absolute line; vertical v at column 25, 40, 60.
 ```
 
 The smoothing splines does not require knot selection, but it does have a smoothing parameter,
@@ -127,7 +128,7 @@ The `gam` package makes it easier to work with multiple nonlinear terms. In addi
 it knows how to plot these functions and their standard errors.
 
 ```{r fig.width=10, fig.height=5}
-require(gam)
+require('gam') # install.packages('gam')
 gam1=gam(wage~s(age,df=4)+s(year,df=4)+education,data=Wage)
 par(mfrow=c(1,3))
 plot(gam1,se=T)
