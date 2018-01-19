@@ -152,7 +152,10 @@ lm1=lm(wage~ns(age,df=4)+ns(year,df=4)+education,data=Wage)
 plot.gam(lm1,se=T)
 ```
 
-```Assignment
+
+Quiz
+---------------------------
+```
 Load the data from the file 7.R.RData, and plot it using plot(x,y). What is the slope coefficient in a linear regression of y on x (to within 10%)?
 
 load("/Users/tungthanhle/Box Sync/MOOCs/Statistical-Learning-Stanford/R session/7.R.RData")
