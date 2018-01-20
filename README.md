@@ -1,10 +1,42 @@
 # Statistical Learning
-#### Stanford University
+Stanford University
+---
+## Disclaimer
+This is from self-paced online learning course at Stanford University. I took this course to refresh the statistical concepts and almost materials are involved in machine learning techniques. The output of this course is the understanding concepts and theories in order to interpret the data and analyze them appropriately.
+
+Through the course, I did some notes for quizzes and code in R for implementation session. Please check the notes and code as the following links:
+### **Notes**
+
++ Chapter 2 - Overview of statistical learning
+
++ Chapter 3 - Additional Notes - Linear Regression in R
+
++ Chapter 3 - Linear regression
+
++ Chapter 4 - classification Problems
+
++ Chapter 5 - Resampling methods
+
++ Chapter 6 - Linear Model Selection and regulization
+
++ Chapter 7 - Moving beyond linearity
+
++ Chapter 8 - Tree-based
+
++ Chapter 9 - SVM
+
++ Chapter 10 - Unsupervised learning
+
+### **R session**
+
++ [Link]()
 
 
 
 
-#### R Misc. Resources:
+
+
+## R Misc. Resources:
 
 * [An Introduction to R](http://cran.r-project.org/doc/manuals/R-intro.pdf)
 
