@@ -53,7 +53,8 @@ Through the course, I did some notes for quizzes and code in R for implementatio
 * [R Manuals](http://cran.r-project.org/manuals.html)
 
 ### Claims
-I completed the course on January 20, 2018.
+
+I completed the course on **January 20, 2018**.
 
 License number: ______
 
