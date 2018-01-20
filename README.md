@@ -7,34 +7,27 @@ This is from self-paced online learning course at Stanford University. I took th
 Through the course, I did some notes for quizzes and code in R for implementation session. Please check the notes and code as the following links:
 ### **Notes**
 
-+ Chapter 2 - Overview of statistical learning
++ [Chapter 2 - Overview of statistical learning](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chap2%20-%20Overview%20of%20statistical%20learning.md)
 
-+ Chapter 3 - Additional Notes - Linear Regression in R
++ [Chapter 3 - Linear Regression in R](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%203%20-%20Linear%20regression.md) and [its note](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%203%20-%20Additional%20Notes%20-%20Linear%20Regression%20in%20R.md)
 
-+ Chapter 3 - Linear regression
++ [Chapter 4 - classification Problems](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%204%20Classification%20Problems.md)
 
-+ Chapter 4 - classification Problems
++ [Chapter 5 - Resampling methods](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%205%20-%20Resampling%20methods.md)
 
-+ Chapter 5 - Resampling methods
++ [Chapter 6 - Linear Model Selection and regulization](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%206%20Linear%20Model%20Selection%20and%20regulization.md)
 
-+ Chapter 6 - Linear Model Selection and regulization
++ [Chapter 7 - Moving beyond linearity](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%207%20Moving%20beyond%20linearity.md)
 
-+ Chapter 7 - Moving beyond linearity
++ [Chapter 8 - Tree-based](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%208%20Tree-based.md)
 
-+ Chapter 8 - Tree-based
++ [Chapter 9 - SVM](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%209%20SVM.md)
 
-+ Chapter 9 - SVM
-
-+ Chapter 10 - Unsupervised learning
++ [Chapter 10 - Unsupervised learning](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%2010%20Unsupervised%20learning.md)
 
 ### **R session**
 
-+ [Link]()
-
-
-
-
-
++ [Link](https://github.com/ttungl/Statistical-Learning/tree/master/Statistical-Learning-Stanford/R%20session)
 
 ### R Misc. Resources:
 
