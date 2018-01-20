@@ -56,6 +56,6 @@ Through the course, I did some notes for quizzes and code in R for implementatio
 
 I completed the course on **January 20, 2018**.
 
-License number: ______
+[Statement URL online](https://prod-cert-bucket.s3.amazonaws.com/downloads/02dae5e429074143950990b1ebb21e2d/Statement.pdf) or [offline](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/StatementOfAccomplisment.pdf)
 
-Certificate URL: ______
+
