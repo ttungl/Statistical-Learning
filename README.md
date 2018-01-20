@@ -2,7 +2,7 @@
 Stanford University
 ---
 ## Disclaimer
-This is from self-paced online learning course at Stanford University. I took this course to refresh the statistical concepts and almost materials are involved in machine learning techniques. The output of this course is the understanding concepts and theories in order to interpret the data and analyze them appropriately.
+This is from self-paced online learning course at Stanford University. I took this course to refresh the statistical concepts and almost materials are involved in machine learning techniques. The output of this course is to understand concepts and theories in order to interpret the data and analyze their insights appropriately.
 
 Through the course, I did some notes for quizzes and code in R for implementation session. Please check the notes and code as the following links:
 ### **Notes**
