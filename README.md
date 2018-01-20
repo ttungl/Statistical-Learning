@@ -4,11 +4,11 @@ Stanford University
 ## Disclaimer
 This is from self-paced online learning course at Stanford University. I took this course to refresh the statistical concepts and almost materials are involved in machine learning techniques. The output of this course is to understand concepts and theories in order to interpret the data and analyze their insights appropriately.
 
-### **Materials**
-+ The same books that I posted in [Machine Learning course](https://github.com/ttungl/Machine-Learning)
+### Materials
++ The same books that I posted in [Machine Learning course](https://github.com/ttungl/Machine-Learning).
  
 Through the course, I did some notes for quizzes and code in R for implementation session. Please check the notes and code as the following links:
-### **Notes**
+### Notes
 
 + [Chapter 2 - Overview of statistical learning](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chap2%20-%20Overview%20of%20statistical%20learning.md)
 
@@ -28,7 +28,7 @@ Through the course, I did some notes for quizzes and code in R for implementatio
 
 + [Chapter 10 - Unsupervised learning](https://github.com/ttungl/Statistical-Learning/blob/master/Statistical-Learning-Stanford/notes/Chapter%2010%20Unsupervised%20learning.md)
 
-### **R session**
+### R session
 
 + [Link](https://github.com/ttungl/Statistical-Learning/tree/master/Statistical-Learning-Stanford/R%20session)
 
@@ -52,3 +52,9 @@ Through the course, I did some notes for quizzes and code in R for implementatio
 
 * [R Manuals](http://cran.r-project.org/manuals.html)
 
+### Claims
+I completed the course on January 20, 2018.
+
+License number: ______
+
+Certificate URL: ______
