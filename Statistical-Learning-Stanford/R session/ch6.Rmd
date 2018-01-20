@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Model Selection
 ================
 
@@ -6,7 +11,8 @@ and a very nice way of distributing an analysis. It has some very simple syntax 
 
 
 ```{r}
-library(ISLR)
+# for markdown: install.packages('glmnet')
+library('ISLR')
 summary(Hitters)
 ```
 There are some missing values here, so before we proceed we will remove them:
@@ -22,7 +28,7 @@ Best Subset regression
 ------------------------
 We will now use the package `leaps` to evaluate all the best-subset models.
 ```{r}
-library(leaps)
+library('leaps') # install.packages('leaps')
 regfit.full=regsubsets(Salary~.,data=Hitters)
 summary(regfit.full)
 ```
@@ -49,7 +55,7 @@ Here we use the `regsubsets` function but specify the `method="forward" option:
 ```{r}
 regfit.fwd=regsubsets(Salary~.,data=Hitters,nvmax=19,method="forward")
 summary(regfit.fwd)
-plot(regfit.fwd,scale="Cp")
+plot(regfit.fwd,scale="Cp") # black means var in, white means var out.
 ```
 
 
@@ -121,7 +127,7 @@ Ridge Regression and the Lasso
 -------------------------------
 We will use the package `glmnet`, which does not use the model formula language, so we will set up an `x` and `y`.
 ```{r}
-library(glmnet)
+library('glmnet') # install.packages('glmnet')
 x=model.matrix(Salary~.-1,data=Hitters) 
 y=Hitters$Salary
 ```
